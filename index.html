@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - LuRRa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>LuRRa</h2>
+    <a href="index.html" class="active">Dashboard</a>
+    <a href="penjualan.html">Input Penjualan</a>
+    <a href="pengeluaran.html">Input Pengeluaran</a>
+    <a href="laporan.html">Laporan</a>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <h1>Dashboard Keuangan</h1>
+
+    <!-- RINGKASAN -->
+    <div class="card-box">
+
+      <div class="card">
+        <h3>Total Penjualan</h3>
+        <span id="totalPenjualan">Rp 0</span>
+      </div>
+
+      <div class="card">
+        <h3>Total Pengeluaran</h3>
+        <span id="totalPengeluaran">Rp 0</span>
+      </div>
+
+      <div class="card">
+        <h3>Saldo Akhir</h3>
+        <span id="saldoAkhir">Rp 0</span>
+      </div>
+
+    </div>
+
+    <!-- STATISTIK -->
+    <div class="chart-grid">
+
+      <div class="chart-card">
+        <h3>Statistik Penjualan</h3>
+        <div class="chart-wrapper">
+          <canvas id="grafikPenjualan"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <h3>Statistik Pengeluaran</h3>
+        <div class="chart-wrapper">
+          <canvas id="grafikPengeluaran"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-card full-width-chart">
+        <h3>Perbandingan Penjualan vs Pengeluaran</h3>
+        <div class="chart-wrapper">
+          <canvas id="grafikPerbandingan"></canvas>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Chart.js HARUS duluan -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Script utama -->
+<script src="script.js"></script>
+
+</body>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Input Penjualan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>LuRRa</h2>
+    <a href="index.html">Dashboard</a>
+    <a href="penjualan.html" class="active">Input Penjualan</a>
+    <a href="pengeluaran.html">Input Pengeluaran</a>
+    <a href="laporan.html">Laporan</a>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <h1>Input Data Penjualan</h1>
+
+    <div class="form-card">
+      <form id="formPenjualan" autocomplete="off">
+
+        <div class="form-group">
+          <label for="tanggal">Tanggal</label>
+          <input type="date" id="tanggal" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nama">Nama Barang</label>
+          <input type="text" id="nama" placeholder="Contoh: Gelang" required>
+        </div>
+
+        <div class="form-group">
+          <label for="harga">Harga</label>
+          <input type="number" id="harga" placeholder="Contoh: 10000" min="0" required>
+        </div>
+
+        <div class="form-group">
+          <label for="jumlah">Jumlah</label>
+          <input type="number" id="jumlah" placeholder="Contoh: 2" min="1" required>
+        </div>
+
+        <button type="submit">
+          Simpan Data
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>

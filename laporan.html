@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laporan Keuangan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>LuRRa</h2>
+    <a href="index.html">Dashboard</a>
+    <a href="penjualan.html">Input Penjualan</a>
+    <a href="pengeluaran.html">Input Pengeluaran</a>
+    <a href="laporan.html" class="active">Laporan</a>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <h1>Laporan Keuangan</h1>
+
+    <!-- GRID 2 KOLOM -->
+    <div class="laporan-grid">
+
+      <!-- ====================== -->
+      <!-- PENJUALAN -->
+      <!-- ====================== -->
+      <div class="laporan-card">
+        <h3>Data Penjualan</h3>
+
+        <div class="filter-box">
+          <input 
+            type="text" 
+            id="searchPenjualan" 
+            placeholder="Cari nama barang..."
+            autocomplete="off"
+          >
+          <button onclick="filterPenjualan()">Cari</button>
+        </div>
+
+        <div class="table-wrapper">
+          <div id="laporanContainer"></div>
+        </div>
+      </div>
+
+      <!-- ====================== -->
+      <!-- PENGELUARAN -->
+      <!-- ====================== -->
+      <div class="laporan-card">
+        <h3>Data Pengeluaran</h3>
+
+        <div class="filter-box">
+          <input 
+            type="text" 
+            id="searchPengeluaran" 
+            placeholder="Cari keterangan..."
+            autocomplete="off"
+          >
+          <button onclick="filterPengeluaran()">Cari</button>
+        </div>
+
+        <div class="table-wrapper">
+          <div id="pengeluaranContainer"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
