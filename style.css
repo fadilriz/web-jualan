@@ -350,3 +350,202 @@ button:hover {
   grid-column: 1 / -1;
   height: 260px;
 }
+
+/* ===============================
+   RESPONSIVE IMPROVEMENT
+================================= */
+
+/* Tablet besar */
+@media (max-width: 1200px){
+
+  .card-box{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .chart-grid{
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* Tablet */
+@media (max-width: 900px){
+
+  .layout{
+    flex-direction: column;
+  }
+
+  .sidebar{
+    width:100%;
+    flex-direction:row;
+    overflow-x:auto;
+    padding:15px;
+  }
+
+  .sidebar h2{
+    display:none;
+  }
+
+  .sidebar a{
+    white-space:nowrap;
+    margin-bottom:0;
+  }
+
+  .content{
+    padding:20px;
+  }
+
+  .card-box{
+    grid-template-columns:1fr;
+  }
+
+  .chart-card{
+    height:280px;
+  }
+
+}
+
+/* Smartphone */
+@media (max-width: 600px){
+
+  h1{
+    font-size:22px;
+  }
+
+  .content{
+    padding:15px;
+  }
+
+  .card{
+    padding:14px;
+  }
+
+  .card span{
+    font-size:18px;
+  }
+
+  .form-card{
+    max-width:100%;
+    padding:20px;
+  }
+
+  .filter-box{
+    flex-direction:column;
+  }
+
+  .table-wrapper{
+    overflow-x:auto;
+  }
+
+  .laporan-table{
+    min-width:600px;
+  }
+
+  .chart-card{
+    height:250px;
+  }
+
+}
+
+/* Extra small phone */
+@media (max-width:400px){
+
+  .sidebar{
+    gap:5px;
+  }
+
+  .sidebar a{
+    font-size:13px;
+    padding:8px 10px;
+  }
+
+  button{
+    width:100%;
+  }
+
+}
+
+/* ===============================
+UI SMOOTH & PERFORMANCE BOOST
+================================= */
+
+/* animasi halus global */
+*{
+transition: background 0.2s ease,
+color 0.2s ease,
+box-shadow 0.2s ease,
+transform 0.15s ease;
+}
+
+/* hover card lebih modern */
+.card:hover,
+.chart-card:hover,
+.laporan-card:hover{
+transform: translateY(-3px);
+box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* tombol lebih responsif */
+button:active{
+transform: scale(0.96);
+}
+
+/* sidebar sticky (desktop) */
+@media (min-width:901px){
+
+.sidebar{
+position:sticky;
+top:0;
+height:100vh;
+}
+
+}
+
+/* scroll lebih smooth */
+html{
+scroll-behavior:smooth;
+}
+
+/* scrollbar modern */
+::-webkit-scrollbar{
+width:8px;
+height:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#f4e8ec;
+border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#d8a7b1;
+border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover
+
+/* tabel lebih nyaman dibaca */
+.laporan-table tbody tr{
+transition: background 0.15s ease;
+}
+
+/* hover tabel */
+.laporan-table tbody tr:hover
+
+/* chart responsif */
+canvas{
+max-width:100%;
+}
+
+/* fix flex overflow */
+.chart-card,
+.card{
+min-width:0;
+}
+
+/* image responsif */
+img{
+max-width:100%;
+height:auto;
+display:block;
+}
